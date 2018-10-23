@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+
+<!-- NAVIGATION BAR -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand mb-0 h1">EasyTO</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+     <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Сменить Город
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Одесса</a>
+          <a class="dropdown-item" href="#">Львов</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Киев</a>
+        </div>
+      </li>    	
+       <li class="nav-item">
+        <a class="nav-link" href="#">Войти в Кабинет</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Моя Запись<span class="sr-only">(current)</span></a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Заявка #" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Поиск</button>
+    </form>
+  </div>
+</nav>
+
+<!-- MAIN SECTION -->
+
+<div style="margin-left: 15px; margin-right: 15px ">
+	<br>
+	<h2>Станции ТО - Киев</h2>
+	<h5 style="color: gray">Записаться на 26 октября</h5>
+	<br>
+
+<div class="container-fluid">
+	<div class="row">
+	  <div class="col-md-6">
+		<table class="table">
+		  <thead>
+		    <tr>
+		      <th scope="col">#</th>
+		      <th scope="col">Адрес</th>
+		      <th scope="col">Рейтинг</th>
+		      <th scope="col">Статус</th>
+		    </tr>
+		  </thead>
+		  <tbody>
+<tr><th scope='row'>00042</th><td>вул. Кайсарова, 7/в</td><td>4.89</td><td><button type="button" class="btn btn-success" style="width:120px">Записаться</button></td></tr>
+<tr><th scope='row'>00048</th><td>Житомирське шосе, 14</td><td>3.81</td><td><button type="button" class="btn btn-success" style="width:120px">Записаться</button></td></tr>
+<tr><th scope='row'>00158</th><td>вул. Народного Ополчення, 25</td><td>2.58</td><td><button type="button" class="btn btn-warning" style="width:120px">Загружено</button></td></tr>
+<tr><th scope='row'>00251</th><td>вул. Пирогівський Шлях, 167/а</td><td>3.61</td><td><button type="button" class="btn btn-success" style="width:120px">Записаться</button></td></tr>
+<tr><th scope='row'>00311</th><td>вул. Бальзака Оноре, 7</td><td>4.85</td><td><button type="button" class="btn btn-danger" style="width:120px">Недоступно</button></td></tr>
+<tr><th scope='row'>00293</th><td>просп. Московський, 28</td><td>3.81</td><td><button type="button" class="btn btn-success" style="width:120px">Записаться</button></td></tr>
+<tr><th scope='row'>00306</th><td>вул. Краснова, 7/1</td><td>4.04</td><td><button type="button" class="btn btn-warning" style="width:120px">Загружено</button></td></tr>
+
+<tr><th scope='row'>00345</th><td>вул. Туполєва Академіка, 19</td><td>3.10</td><td><button type="button" class="btn btn-success" style="width:120px">Записаться</button></td></tr>
+
+
+
+
+
+
+
+		  </tbody>
+		</table>
+
+	  </div>
+	  <div class="col-md-6">
+		<div id="googleMap" style="width:100%;height:400px;"></div>
+		<script>
+		function myMap() {
+
+  var locations = [
+    ['00042<br>\
+    вул. Кайсарова, 7',   50.3983915,30.4829756],
+    ['00048<br>\
+    Житомирське шосе, 14, CA 90401', 50.4470624,30.2361466],
+    ['00158<br>\
+    вул. Народного Ополчення, 25', 50.4078824,30.4611056],
+    ['00251<br>\
+    вул. Пирогівський Шлях, 167/а', 50.3463757,30.5353598],
+    ['00311<br>\
+    вул. Бальзака Оноре, 7', 50.5058189,30.5806593],
+        ['00293<br>\
+    просп. Московський, 28', 50.4875517,30.5158418],
+        ['00306<br>\
+    вул. Краснова, 7/1', 50.4575977,30.3710557],
+        ['00345<br>\
+    вул. Туполєва Академіка, 19', 50.4858358,30.3902634]
+  ];
+
+
+
+		var mapProp= {
+		    center:new google.maps.LatLng(50.4420568,30.5295658),
+		    zoom:10,
+		};
+		var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+
+var infowindow =  new google.maps.InfoWindow({});
+var marker, count;
+for (count = 0; count < locations.length; count++) {
+    marker = new google.maps.Marker({
+      position: new google.maps.LatLng(locations[count][1], locations[count][2]),
+      map: map,
+      title: locations[count][0]
+    });
+google.maps.event.addListener(marker, 'click', (function (marker, count) {
+      return function () {
+        infowindow.setContent(locations[count][0]);
+        infowindow.open(map, marker);
+      }
+    })(marker, count));
+  }
+
+
+
+
+		}
+		</script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAtYHHt7ktiBlufoDCklBYHyUya-9mO4ls&callback=myMap"></script>	
+	  </div>
+	</div>
+	<br>
+
+</div>
+
+
+
+</body>
+</html>
